@@ -1,0 +1,250 @@
+:root {
+    --cream: #ffddaf;
+    --coffee: #653c37;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'verdana', sans-serif;
+}
+
+body {
+    background: var(--coffee);
+}
+
+/* Header style */
+header {
+    height: 100vh;
+    background-image: url('img/cover.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--cream);
+    padding: .4rem 3rem;
+}
+
+#header-img {
+    width: 3.8rem;
+    height: 100%;
+}
+
+#nav-bar h2 {
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    color: var(--coffee);
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    display: flex;
+}
+
+#nav-bar ul li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 .5rem;
+    padding: .5rem 1rem;
+}
+    #nav-bar ul li:hover {
+        background: var(--coffee);
+    }
+    #nav-bar ul li a {
+        text-decoration: none;
+        color: var(--coffee);
+    }
+    #nav-bar ul li:hover a {
+        color: var(--cream);
+    }
+
+.title-subtitle {
+    position: absolute;
+    top: 35vh;
+    right: 20%;
+    color: var(--cream);
+    text-align: center;
+}
+
+    .title-subtitle h1 {
+        margin: 2rem 0;
+        font-size: 3rem;
+    }
+    .title-subtitle h3 {
+        font-size: 1.5rem;
+    }
+
+/* Products Section */
+section#products {
+    margin: 5rem 10% 10rem;
+    text-align: center;
+}
+
+#products h3 {
+    margin: 4rem;
+    color: var(--cream);
+}
+
+.thumbs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 24%;
+    margin: .5%;
+    padding: .5rem .5rem 2rem;
+    background: var(--cream);
+}
+
+.thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.thumb h4 {
+    margin: 1rem;
+}
+
+.thumb h4, .thumb p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+/* Process section style */
+#process {
+    margin: 5rem 20% 10rem;
+}
+
+#process h3 {
+    margin: 3rem;
+    color: var(--cream);
+    text-align: center;
+}
+
+#process iframe {
+    width: 100%;
+    height: 500px;
+    border: solid .5rem var(--cream);
+}
+
+/* footer-contact style */
+footer#contact {
+    background: var(--cream);
+    color: var(--coffee);
+    padding: 3rem;
+    text-align: center;
+}
+
+footer#contact #form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+    #form #email {
+        margin: .5rem;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    #form #submit {
+        margin: .5rem auto;
+        padding: .7rem 1.5rem;
+        color: var(--cream);
+        background: var(--coffee);
+        outline: none;
+        font-size: 1rem;
+        border: solid 2px var(--cream);
+        border-radius: 8px;
+    }
+    #form #submit:hover {
+        color: var(--coffee);
+        background: var(--cream);
+        border: solid 2px var(--coffee);
+    }
+
+.rights {
+    text-align: center;
+    background: var(--coffee);
+    color: var(--cream);
+    padding: 1rem 0;
+}
+
+/* Media queries for smaller screens */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
+        font-size: 12px;
+    }
+
+    .title-subtitle {
+        top: 25vh;
+        right: 10%;
+    }
+
+    .thumb {
+        width: 48%;
+        margin: 1%;
+    }
+
+    #process {
+        margin: 5rem 15% 5rem;
+    }
+    
+
+    #process iframe {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+
+    #nav-bar {
+        padding: .4rem 1rem;
+    }
+
+    .title-subtitle {
+        top: 25vh;
+        right: 10%;
+    }
+
+    section#products {
+        margin: 5rem 10%;
+    }
+
+    .thumb {
+        width: 90%;
+        margin: 2rem 5%;
+    }
+
+    #process {
+        margin: 5rem 10% 5rem;
+    }
+    
+
+    #process iframe {
+        height: 300px;
+    }
+}
